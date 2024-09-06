@@ -49,9 +49,7 @@ h1{
   color: white;
 
 }
-ul{
- 
-}
+
 button{
   background-color: white;
   width: 70%;
@@ -63,10 +61,6 @@ button{
   
 }
 
-/* a{
-  text-decoration: none;
-  color: black;
-} */
 
 
 </style>
