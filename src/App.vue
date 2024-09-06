@@ -1,85 +1,73 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <img src="@/assets/img/Logo.png" alt="Logo" class="logo" />
+        <input id="inputSearch" type="text" placeholder="Search">
       </nav>
+      <RouterLink to="/" class="elementNav">Home</RouterLink>
+      <RouterLink to="/categorie" class="elementNav">Categories</RouterLink>
+      <RouterLink to="/about" class="elementNav">About</RouterLink> 
     </div>
   </header>
 
-  <RouterView />
+  <body>
+  
+    <RouterView /> <!-- Affiche le contenu des routes (ex: HomeView) -->
+    
+  </body>
+  <footer>
+ 
+    <a id="lienFooter" href="https://www.linkedin.com/in/eric-oriez/" target="_blank">Créer par Eric Oriez en 2024</a>
+
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.wrapper{
+
+  background-color:#383345;
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
+ 
   text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
+    font-size: 2rem;
     padding: 1rem 0;
-    margin-top: 1rem;
-  }
+    position: relative;
 }
+.elementNav{
+  text-decoration: none;
+  margin: 5px;
+  color: white;
+}
+
+#inputSearch{
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  width: 20%;
+  height: 30px;
+  border-radius: 15px;
+  border-style: none;
+  
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#lienFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#383345;
+  height: 150px;
+  color: aliceblue;
+
+}
+
 </style>
