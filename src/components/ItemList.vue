@@ -1,33 +1,32 @@
 <template>
-    <div>
-      <h1>Liste des Items</h1>
-      <ul>
-        <li v-for="item in items" :key="item.id">{{ item.titre }} - {{ item.price }} €</li>
-      </ul>
-    </div>
-  </template>
-  <script>
-  import { ref, onMounted } from 'vue';
-  import { getItems } from '@/api/api'; // Assurez-vous que le chemin est correct
-  
-  export default {
-    name: 'ItemList',
-    setup() {
-      const items = ref([]);
-  
-      onMounted(async () => {
-        try {
-          items.value = await getItems(); // Récupère les items depuis l'API
-        } catch (error) {
-          console.error('Erreur lors de la récupération des items :', error);
-        }
-      });
-  
-      return {
-        items,
-      };
-    },
-  };
-  </script>
+  <div v-if="items.length > 0">
+    <h2>Articles de la catégorie sélectionnée</h2>
+    <ul>
+      <li v-for="item in items" :key="item.id">
+        {{ item.titre }} - {{ item.price }} €
+      </li>
+    </ul>
+  </div>
+  <div v-else>
+    <p>Sélectionnez une catégorie pour afficher les articles.</p>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
+  }
+}
+</script>
+
+<style scoped>
+h2 {
+  margin-top: 20px;
+}
+</style>
 
   

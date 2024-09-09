@@ -1,6 +1,6 @@
 <template>
   <div class="items-view">
-    <h1>Nos Articles</h1>
+    <h1>Nos Derniers Articles</h1>
     <div class="card-container">
       <ItemCard v-for="item in items" :key="item.id" :item="item" />
     </div>
@@ -38,7 +38,10 @@ export default {
 .items-view {
   text-align: center;
 }
-
+h1{
+  color:black;
+  margin: 40px;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;

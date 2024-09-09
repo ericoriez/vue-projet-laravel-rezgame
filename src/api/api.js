@@ -17,6 +17,18 @@ export const getUsers = async () => {
 };
 
 
+
+export const getItem = async (id) => {
+  try {
+    const response = await apiClient.get(`/api/items/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Erreur lors de la récupération de l\'item', error);
+    throw error;
+  }
+};
+
+
 // Fonction pour récupérer les items
 export const getItems = async () => {
     try {
@@ -39,3 +51,14 @@ export const getCategories = async () => {
       throw error;
     }
   };
+
+// Fonction pour récupérer les articles par catégorie
+export const getItemsByCategory = async (categoryId) => {
+  try {
+    const response = await apiClient.get(`/api/categories/${categoryId}/items`);
+    return response.data;
+  } catch (error) {
+    console.error('Erreur lors de la récupération des articles par catégorie', error);
+    throw error;
+  }
+};

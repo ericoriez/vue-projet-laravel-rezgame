@@ -1,13 +1,15 @@
 <template>
+  <router-link :to="`/items/${item.id}`" class="card-link">
     <div class="card">
-      <img src="https://global-img.gamergen.com/the-legend-of-zelda-breath-of-the-wild-jaquette_0320051000855326.jpg" alt="Image de l'article" class="card-img-top" />
+      <img :src="item.image || 'https://global-img.gamergen.com/the-legend-of-zelda-breath-of-the-wild-jaquette_0320051000855326.jpg'" alt="Image de l'article" class="card-img-top" />
       <div class="card-body">
         <h5 class="card-title">{{ item.titre }}</h5>
         <p class="card-text">{{ item.price }} €</p>
       </div>
     </div>
-  </template>
-  
+  </router-link>
+</template>
+
   <script>
   export default {
     props: {
@@ -35,7 +37,8 @@
   }
   
   .card-body {
-    padding: 15px;
+    height:100px;
+    margin: 5px;
     
   }
   
@@ -44,10 +47,12 @@
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
+    
   }
   
   .card-text {
     font-size: 1rem;
     color: white;
+    
   }
   </style>
