@@ -62,17 +62,15 @@ export default {
 </script>
 
 <style scoped>
-/* Mise en page avec Flexbox pour placer les catégories et les articles côte à côte */
+
 .categories-items-view {
   display: flex;
   width: 100%;
-  height: 100%;
 }
 
 #redContainer {
   background-color: #a52502;
   width: 30%;
-  height: 100vh; /* Prend toute la hauteur de la page */
   padding: 20px;
 }
 
@@ -90,7 +88,9 @@ button {
   justify-content: center;
   margin: 20px 0;
 }
-
+button:hover{
+  background-color: greenyellow;
+}
 /* Section des articles */
 .items-view {
   width: 70%;

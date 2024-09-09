@@ -3,7 +3,7 @@
     <div class="wrapper">
       <nav>
         <img src="@/assets/img/Logo.png" alt="Logo" class="logo" />
-        <input id="inputSearch" type="text" placeholder="Search">
+        <input id="inputSearch" type="text" placeholder=" Search ...">
       </nav>
       <RouterLink to="/" class="elementNav">Home</RouterLink>
       <RouterLink to="/categorie" class="elementNav">Categories</RouterLink>
@@ -15,7 +15,7 @@
 
     <main>
       <div id="containerMain">
-        <RouterView /> <!-- Affiche le contenu des routes (ex: HomeView) -->
+        <RouterView /> 
       </div>
     </main>
 
@@ -31,11 +31,13 @@
       </div>
       <div id="containerFooterAPropos">
         <h2>A Propos</h2>
-        <p id="pFooter">Rez'Game est né de l'idée de rendre les jeux vidéo plus accessibles à tous, tout en donnant une seconde vie
+        <p id="pFooter">Rez'Game est né de l'idée de rendre les jeux vidéo plus accessibles à tous, tout en donnant une
+          seconde vie
           aux jeux que vous avez adorés. Nous sommes une équipe de passionnés de jeux vidéo, dédiée à fournir une
           expérience de shopping en ligne simple, rapide et sécurisée. Que vous soyez un amateur de jeux rétro ou à la
           recherche des dernières sorties, notre catalogue varié saura satisfaire toutes vos envies.</p>
-          <a id="lienFooter" href="https://www.linkedin.com/in/eric-oriez/" target="_blank">Créer par Eric Oriez en 2024</a>
+        <a id="lienFooter" href="https://www.linkedin.com/in/eric-oriez/" target="_blank">Créer par Eric Oriez en
+          2024</a>
       </div>
       <div id="containerFooterReseaux">
         <h2>Réseaux</h2>
@@ -86,7 +88,7 @@ nav {
 #containerMain {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+ 
 }
 
 main {
@@ -101,34 +103,38 @@ footer {
   width: 100%;
 
 }
-h2{
+
+h2 {
   color: white;
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
-#containerFooter{
+
+#containerFooter {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #383345;
-  
+
 }
-#containerFooterContact{
+
+#containerFooterContact {
   color: white;
 }
 
-#mail{
+#mail {
   text-decoration: none;
   color: white;
 }
-#containerFooterAPropos{
+
+#containerFooterAPropos {
   color: white;
   width: 40%;
-  
+
 }
 
-#pFooter{
+#pFooter {
   margin: 15px 0;
 }
 
@@ -137,13 +143,15 @@ h2{
   display: flex;
   justify-content: center;
   text-decoration: none;
-  margin:10px;
+  margin: 10px;
 }
-#tiktok{
+
+#tiktok {
   background-color: white;
   border-radius: 15px;
 }
-img{
+
+img {
   margin-left: 10px;
 }
 </style>
